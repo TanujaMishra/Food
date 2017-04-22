@@ -1,6 +1,8 @@
 <html>
 <head>
 <title>Food</title>
+<script src="js/howler.js"></script>
+    <script src="js/howler.core.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <style type="text/css">
     .centerImage
@@ -16,35 +18,17 @@
 </head>
 <body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <!-- Save for Web Slices (4.psd) -->
-    <div id="mydiv">
+    <div id="mygif">
         <img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
     </div>
+    
     <script>
         
-        function touchStart(event) {
-            {
-            evt.preventDefault();
-            myAudio1= new Audio('Sound/Food_White_Sculpture_01.ogg');
-            myAudio2= new Audio('Sound/Food_White_Sculpture_01.aac');
-        
-            if (myAudio1.canPlayType("audio/ogg") == "probably")
-            {
-                myAudio1.addEventListener('ended', function() {
-                this.currentTime = 0;
-                this.play();
-                }, false);
-                myAudio1.play(); 
-            }
-            else
-            {
-                myAudio2.addEventListener('ended', function() {
-                this.currentTime = 0;
-                this.play();
-                }, false);
-                myAudio2.play(); 
-            }   
-            }
-        
+       var sound = new Howl({
+        src: ['Sound/Food_White_Sculpture_01.ogg', 'Sound/Food_White_Sculpture_01.mp3', 'Sound/Food_White_Sculpture_01.wav', 'Sound/Food_White_Sculpture_01.aac'],
+        autoplay: true,
+        loop: true,
+        });
     </script>
 
 <!-- End Save for Web Slices -->
