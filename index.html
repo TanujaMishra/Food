@@ -20,18 +20,8 @@
         <img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
     </div>
     <script>
-         
-        function startup() 
-            {
-            var el = document.getElementsById("mydiv");
-            el.addEventListener("touchstart", handleStart, false);
-            el.addEventListener("touchend", handleEnd, false);
-            el.addEventListener("touchcancel", handleCancel, false);
-            el.addEventListener("touchmove", handleMove, false);
-            log("initialized.");
-            }
         
-        function handleStart(evt) 
+        function touchStart(event) {
             {
             evt.preventDefault();
             myAudio1= new Audio('Sound/Food_White_Sculpture_01.ogg');
