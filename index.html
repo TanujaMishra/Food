@@ -31,6 +31,7 @@
         src: ['Sound/Food_White_Sculpture_01.ogg', 'Sound/Food_White_Sculpture_01.mp3', 'Sound/Food_White_Sculpture_01.wav', 'Sound/Food_White_Sculpture_01.aac'],
         loop:1,
         buffer: true,
+        autoplay: true,
         });
         
         if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) 
@@ -39,16 +40,12 @@
             function sndInit()
                 {
                     sound.play();
-                    //sound.loop();
+                    
                     document.getElementById('init').style.display = 'none';
                     
                 }
         }
-        else
-        {
-            sound.play();
-            //sound.loop();
-        }
+        
     </script>
 
 <!-- End Save for Web Slices -->
