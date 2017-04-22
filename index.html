@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Food</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+    .centerImage
+    {
+       width:400px;
+	   height:260px;
+	   position:absolute;
+	   left:50%;
+	   top:50%;
+	   margin:-130px 0 0 -200px;
+    }
+</style>
+</head>
+<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- Save for Web Slices (4.psd) -->
+<img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
+    <script>
+        
+        myAudio1= new Audio('Sound/Food_White_Sculpture_01.ogg');
+        myAudio2= new Audio('Sound/Food_White_Sculpture_01.aac');
+        
+        if (myAudio1.canPlayType("audio/ogg") == "probably")
+        {
+            myAudio1.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+            }, false);
+            myAudio1.play(); 
+        }
+        else
+        {
+            myAudio2.addEventListener('ended', function() {
+            this.currentTime = 0;
+            this.play();
+            }, false);
+            myAudio2.play(); 
+        }   
+        
+        
+    </script>
+<!-- End Save for Web Slices -->
+</body>
+</html>
