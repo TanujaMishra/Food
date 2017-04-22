@@ -16,31 +16,47 @@
 </head>
 <body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <!-- Save for Web Slices (4.psd) -->
-<img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
+    <div id="mydiv">
+        <img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
+    </div>
     <script>
+         
+        function startup() 
+            {
+            var el = document.getElementsById("mydiv");
+            el.addEventListener("touchstart", handleStart, false);
+            el.addEventListener("touchend", handleEnd, false);
+            el.addEventListener("touchcancel", handleCancel, false);
+            el.addEventListener("touchmove", handleMove, false);
+            log("initialized.");
+            }
         
-        myAudio1= new Audio('Sound/Food_White_Sculpture_01.ogg');
-        myAudio2= new Audio('Sound/Food_White_Sculpture_01.aac');
+        function handleStart(evt) 
+            {
+            evt.preventDefault();
+            myAudio1= new Audio('Sound/Food_White_Sculpture_01.ogg');
+            myAudio2= new Audio('Sound/Food_White_Sculpture_01.aac');
         
-        if (myAudio1.canPlayType("audio/ogg") == "probably")
-        {
-            myAudio1.addEventListener('ended', function() {
-            this.currentTime = 0;
-            this.play();
-            }, false);
-            myAudio1.play(); 
-        }
-        else
-        {
-            myAudio2.addEventListener('ended', function() {
-            this.currentTime = 0;
-            this.play();
-            }, false);
-            myAudio2.play(); 
-        }   
-        
+            if (myAudio1.canPlayType("audio/ogg") == "probably")
+            {
+                myAudio1.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play();
+                }, false);
+                myAudio1.play(); 
+            }
+            else
+            {
+                myAudio2.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play();
+                }, false);
+                myAudio2.play(); 
+            }   
+            }
         
     </script>
+
 <!-- End Save for Web Slices -->
 </body>
 </html>
