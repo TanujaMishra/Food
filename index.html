@@ -14,12 +14,26 @@
 	   top:50%;
 	   margin:-130px 0 0 -200px;
     }
+    #touchme
+    {
+        font-weight: bold;
+        font-family: Helvetica Neue;
+        color: rgba(255,255,255,1); 
+        font-size: 44px; 
+        margin-top: 6%;
+        margin-left: 41%;
+        z-index: 100;
+    }
+			
 </style>
 </head>
 <body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <!-- Save for Web Slices (4.psd) -->
     <div id="mygif">
         <img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
+    </div>
+    <div id="touchme">
+        <b>Touch Me</b>
     </div>
     
     <script>
@@ -38,6 +52,7 @@
                     sound.play();
                     sound.loop();
                     document.getElementById('init').style.display = 'none';
+                    document.getElementById('touchme').style.display = 'none';
                 }
         }
     </script>
