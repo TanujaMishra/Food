@@ -14,14 +14,17 @@
 	   top:50%;
 	   margin:-130px 0 0 -200px;
     }
-    
+    #txt
+    {
+       margin-top: 30%;
+    }
     #mytxt
     {
-       font-size: 55px;
-	   margin-top:30%;
+       font-size: 45px;
+	   display: inline-block;
 	   font-family:Helvetica Neue;
-       color: ghostwhite
-       
+       color: lemonchiffon;
+       text-align: center;
     }
     
 			
@@ -32,9 +35,9 @@
     <div id="mygif">
         <img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
     </div>
-    <div id="mytxt">
+    <div id="txt">
         <center>
-        <b>Tap on me!</b>
+            <label id="mytxt" onclick="myFunction()"><b>Tap on me</b></label>
         </center>
     </div>
     
@@ -47,9 +50,14 @@
         autoplay: true,
         });
         
+        function myFunction()
+            {
+                document.getElementById("mytxt").style.display = "none";
+            }
+        
         if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) 
         {
-            //document.getElementById("mytxt").style.visibility = "visible";
+            
             document.write('<a id="init" ontouchstart="javascript:sndInit();"></a>');
             
             function sndInit()
