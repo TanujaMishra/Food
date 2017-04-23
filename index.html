@@ -18,9 +18,10 @@
     #mytxt
     {
        font-size: 40px;
-	   margin-left:41%;
 	   margin-top:6%;
 	   font-family:Helvetica Neue;
+       color: ghostwhite
+       
     }
     
 			
@@ -31,8 +32,10 @@
     <div id="mygif">
         <img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
     </div>
-    <div id="mytxt" display="none">
-        <b>Touch Me</b>
+    <div id="mytxt" hidden>
+        <center>
+        <b>Touch Me!</b>
+        </center>
     </div>
     
     <script>
@@ -46,13 +49,13 @@
         
         if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) 
         {
-            document.getElementById('mytxt').style.display = 'block';
+            document.getElementById("mytxt").style.visibility = "visible";
             document.write('<a id="init" ontouchstart="javascript:sndInit();"></a>');
             function sndInit()
                 {
                     sound.play();
                     document.getElementById('init').style.display = 'none';
-                    document.getElementById('mytxt').style.display = 'none';
+                    document.getElementById("mytxt").style.visibility = "hidden";
                     
                 }
         }
