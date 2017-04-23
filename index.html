@@ -38,7 +38,7 @@
     </div>
     <div id="txt">
         <center>
-            <label id="mytxt" onclick="myFunction()"><b>Tap on me!</b></label>
+            <label id="mytxt" ontouchstart="javascript:sndInit();"><b>Tap on me!</b></label>
         </center>
     
     <script>
@@ -50,19 +50,20 @@
         autoplay: false,
         });
   
-      
+        
         if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) 
         {
             
             document.write('<a id="init" ontouchstart="javascript:sndInit();"></a>');
-            
-            function sndInit()
+ 
+        }
+        function sndInit()
                 {
                     sound.play();
                     document.getElementById('init').style.display = 'none';
                     document.getElementById("mytxt").style.display = "none";
+                    
                 }
-        }
         
     </script>
 
