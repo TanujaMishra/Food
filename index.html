@@ -16,7 +16,7 @@
     }
     #txt
     {
-       margin-top: 30%;
+       margin-top: 3%;
     }
     #mytxt
     {
@@ -25,6 +25,20 @@
 	   font-family:Helvetica Neue;
        color: lemonchiffon;
        text-align: center;
+        display: block;
+    }
+    #txt1
+    {
+       margin-top: 3%;
+    }
+    #mytxt1
+    {
+       font-size: 45px;
+	   display: inline-block;
+	   font-family:Helvetica Neue;
+       color: ghostwhite;
+       text-align: center;
+       display: none;
     }
     
 			
@@ -37,7 +51,12 @@
     </div>
     <div id="txt">
         <center>
-            <label id="mytxt" onclick="myFunction()"><b>Tap on me</b></label>
+            <label id="mytxt" onclick="myFunction()"><b>Tap to hear</b></label>
+        </center>
+    </div>
+    <div id="txt1">
+        <center>
+            <label id="mytxt1" onclick="myFunction1()"><b>Tap to mute</b></label>
         </center>
     </div>
     
@@ -47,14 +66,22 @@
         src: ['Sound/Food_White_Sculpture_01.ogg', 'Sound/Food_White_Sculpture_01.mp3', 'Sound/Food_White_Sculpture_01.wav', 'Sound/Food_White_Sculpture_01.aac'],
         loop: true,
         buffer: true,
-        autoplay: true,
+        autoplay: false,
         });
         
         function myFunction()
             {
                 document.getElementById("mytxt").style.display = "none";
+                sound.play();
+                document.getElementById("mytxt1").style.display = "block";
             }
-        
+        function myFunction1()
+            {
+                document.getElementById("mytxt1").style.display = "none";
+                sound.pause();
+                document.getElementById("mytxt").style.display = "block";
+            }
+        /*
         if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) 
         {
             
@@ -66,7 +93,7 @@
                     document.getElementById('init').style.display = 'none';
                     document.getElementById("mytxt").style.display = "none";
                 }
-        }
+        }*/
         
     </script>
 
