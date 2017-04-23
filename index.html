@@ -32,7 +32,7 @@
     <div id="mygif">
         <img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
     </div>
-    <div id="mytxt" hidden>
+    <div id="mytxt" visible>
         <center>
         <b>Touch Me!</b>
         </center>
@@ -49,7 +49,7 @@
         
         if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i))) 
         {
-            document.getElementById("mytxt").style.visibility = "visible";
+            //document.getElementById("mytxt").style.visibility = "visible";
             document.write('<a id="init" ontouchstart="javascript:sndInit();"></a>');
             function sndInit()
                 {
