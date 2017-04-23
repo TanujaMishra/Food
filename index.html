@@ -32,7 +32,7 @@
     <div id="mygif">
         <img src="images/4.gif" class="centerImage" width="400" height="260" alt="">
     </div>
-    <div id="mytxt" visible>
+    <div id="mytxt">
         <center>
         <b>Tap on me!</b>
         </center>
@@ -51,12 +51,12 @@
         {
             //document.getElementById("mytxt").style.visibility = "visible";
             document.write('<a id="init" ontouchstart="javascript:sndInit();"></a>');
+            
             function sndInit()
                 {
                     sound.play();
                     document.getElementById('init').style.display = 'none';
-                    document.getElementById("mytxt").style.visibility = "hidden";
-                    
+                    document.getElementById("mytxt").style.display = "none";
                 }
         }
         
